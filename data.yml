@@ -461,7 +461,7 @@ news:
 #   content: plain text description
 #   hide: True or False (case sensitive, optional)
   - name: "Closed Indefinitely"
-    content: "Until we feel it's safe to reopen, The 9:20 Special will remain closed. Stay safe everyone."
+    content: "Until we feel it's safe to reopen, The 9:20 Special will remain closed. Wear a mask & wash your hands. Stay safe everyone."
     hide: False
   - date: 3/31/2020
     name: "Closed for March"
