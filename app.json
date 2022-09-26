@@ -2,7 +2,7 @@
   "name": "9:20 special",
   "description": "This app does one little thing, and does it well.",
   "buildpacks": [
-    { "url": "https://github.com/beanieboi/nginx-buildpack" },
+    { "url": "https://github.com/heroku/heroku-buildpack-nginx" },
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs" },
     { "url": "https://github.com/heroku/heroku-buildpack-python" }
   ],
