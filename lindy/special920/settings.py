@@ -182,7 +182,7 @@ PIPELINE = {
     'CSS_COMPRESSOR': 'pipeline.compressors.NoopCompressor',
     'JS_COMPRESSOR': 'pipeline.compressors.NoopCompressor',
     # 'SASS_BINARY': PROJECT_ROOT / 'node_modules' / '.bin' / 'node-sass',
-    'SASS_BINARY': '/usr/bin/env python -m sassc',
+    'SASS_BINARY': '/usr/bin/env python -m sass',
     'SASS_ARGUMENTS': ' '.join('-I {}'.format(d) for d in (
         PROJECT_ROOT / 'bower_components/foundation-sites/scss',
         PROJECT_ROOT / 'bower_components/motion-ui/src',
@@ -193,7 +193,7 @@ PIPELINE = {
 STATIC_URL = '/static/'
 STATIC_ROOT = PROJECT_ROOT / 'static'
 
-HACK_DB = yaml.load(open(PROJECT_ROOT / 'data.yml'))
+HACK_DB = yaml.safe_load(open(PROJECT_ROOT / 'data.yml'))
 
 class_desc_dict = {
     'Level 1A': '6-count + 8-count',
