@@ -1,6 +1,7 @@
 {
   "name": "9:20 special",
   "description": "This app does one little thing, and does it well.",
+  "stack": "heroku-22",
   "buildpacks": [
     { "url": "https://github.com/heroku/heroku-buildpack-nginx" },
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs" },
