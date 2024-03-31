@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
-from __future__ import absolute_import
+
+
+
 
 # Standard Library
 import os
@@ -28,97 +30,98 @@ ADMIN_ENABLED = False
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = (Path(__file__).dirname() / '..').abspath()
-PROJECT_ROOT = (BASE_DIR / '..').abspath()
+BASE_DIR = (Path(__file__).dirname() / "..").abspath()
+PROJECT_ROOT = (BASE_DIR / "..").abspath()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5@l^^lozn5d41x1iiotg#=!g#osewcc1mf8x4em&u-htb-9eae'
+SECRET_KEY = "5@l^^lozn5d41x1iiotg#=!g#osewcc1mf8x4em&u-htb-9eae"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(environ.get('DEBUG', 0))
+DEBUG = bool(environ.get("DEBUG", 0))
 print(DEBUG)
-ALLOWED_HOSTS = ['*', ]
+ALLOWED_HOSTS = [
+    "*",
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
-    'lindy.static920',
-
-    'pipeline',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "lindy.static920",
+    "pipeline",
     # 'djangobower',
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'lindy.special920.urls'
+ROOT_URLCONF = "lindy.special920.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django_jinja.backend.Jinja2',
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'cache_size': 0,
-            'match_extension': '',
-            'match_regex': r'.*',
-            'auto_reload': DEBUG,
-            'extensions': DEFAULT_EXTENSIONS + [
-                'pipeline.jinja2.PipelineExtension',
+        "BACKEND": "django_jinja.backend.Jinja2",
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "cache_size": 0,
+            "match_extension": "",
+            "match_regex": r".*",
+            "auto_reload": DEBUG,
+            "extensions": DEFAULT_EXTENSIONS
+            + [
+                "pipeline.jinja2.PipelineExtension",
             ],
-            'context_processors': [
-                'django.contrib.auth.context_processors.auth',
-                'django.template.context_processors.debug',
-                'django.template.context_processors.i18n',
-                'django.template.context_processors.media',
-                'django.template.context_processors.static',
-                'django.template.context_processors.tz',
-                'django.contrib.messages.context_processors.messages',
+            "context_processors": [
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
+                "django.template.context_processors.tz",
+                "django.contrib.messages.context_processors.messages",
             ],
-        }
+        },
     },
-     {
-         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-         'DIRS': [],
-         'APP_DIRS': True,
-         'OPTIONS': {
-             'context_processors': [
-                 'django.template.context_processors.debug',
-                 'django.template.context_processors.request',
-                 'django.contrib.auth.context_processors.auth',
-                 'django.contrib.messages.context_processors.messages',
-             ],
-         },
-     },
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
 ]
 
-WSGI_APPLICATION = 'lindy.special920.wsgi.application'
+WSGI_APPLICATION = "lindy.special920.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -128,16 +131,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -145,9 +148,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -157,60 +160,58 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+STATICFILES_STORAGE = "pipeline.storage.PipelineCachedStorage"
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'pipeline.finders.PipelineFinder',
 )
 
-SHOW_ERRORS_INLINE = False
+SHOW_ERRORS_INLINE = True
+PIPELINE_STORAGE = "pipeline.storage.PipelineCachedStorage"
 PIPELINE = {
-    'SHOW_ERRORS_INLINE': False,
-    'STYLESHEETS': {
-        'app': {
-            'source_filenames': (
-                'scss/app.scss',
-            ),
-            'output_filename': 'css/app.css',
+    "SHOW_ERRORS_INLINE": True,
+    "STYLESHEETS": {
+        "app": {
+            "source_filenames": ("scss/app.scss",),
+            "output_filename": "css/app.css",
         },
     },
-    'COMPILERS': (
-        'pipeline.compilers.sass.SASSCompiler',
+    "COMPILERS": ("pipeline.compilers.sass.SASSCompiler",),
+    "CSS_COMPRESSOR": "pipeline.compressors.NoopCompressor",
+    "JS_COMPRESSOR": "pipeline.compressors.NoopCompressor",
+    "SASS_BINARY": "/usr/bin/env python -m pysassc",
+    "SASS_ARGUMENTS": " ".join(
+        f"-I {d}"
+        for d in (
+            PROJECT_ROOT / "bower_components/foundation-sites/scss",
+            PROJECT_ROOT / "bower_components/motion-ui/src",
+        )
     ),
-    'CSS_COMPRESSOR': 'pipeline.compressors.NoopCompressor',
-    'JS_COMPRESSOR': 'pipeline.compressors.NoopCompressor',
-    # 'SASS_BINARY': PROJECT_ROOT / 'node_modules' / '.bin' / 'node-sass',
-    'SASS_BINARY': '/usr/bin/env python -m sass',
-    'SASS_ARGUMENTS': ' '.join('-I {}'.format(d) for d in (
-        PROJECT_ROOT / 'bower_components/foundation-sites/scss',
-        PROJECT_ROOT / 'bower_components/motion-ui/src',
-    ))
 }
 
 
-STATIC_URL = '/static/'
-STATIC_ROOT = PROJECT_ROOT / 'static'
+STATIC_URL = "/static/"
+STATIC_ROOT = PROJECT_ROOT / "static"
 
-HACK_DB = yaml.safe_load(open(PROJECT_ROOT / 'data.yml'))
+HACK_DB = yaml.safe_load(open(PROJECT_ROOT / "data.yml"))
 
 class_desc_dict = {
-    'Level 1A': '6-count + 8-count',
-    'Level 1B': '8-count + Charleston',
-    'Level 1C': '6-count + Charleston',
-    'Level 2A': 'Swingouts',
-    'Level 2B': 'Musicality',
-    'Level 2C': 'Charleston',
-    'Level 2D': 'Classics',
-    'Level 3A': 'Technique',
-    'Level 3B': 'Musicality',
-    'Level 3C': 'Beyond Lindy Hop',
-    'Level 3D': 'Vocabulary',
-    'Level 3P': 'Performance Class',
+    "Level 1A": "6-count + 8-count",
+    "Level 1B": "8-count + Charleston",
+    "Level 1C": "6-count + Charleston",
+    "Level 2A": "Swingouts",
+    "Level 2B": "Musicality",
+    "Level 2C": "Charleston",
+    "Level 2D": "Classics",
+    "Level 3A": "Technique",
+    "Level 3B": "Musicality",
+    "Level 3C": "Beyond Lindy Hop",
+    "Level 3D": "Vocabulary",
+    "Level 3P": "Performance Class",
 }
 
-with open('teacher_schedule.csv') as schedule:
+with open("teacher_schedule.csv") as schedule:
     from csv import reader
 
     lines = reader(schedule)
@@ -223,36 +224,36 @@ with open('teacher_schedule.csv') as schedule:
         line = dict(zip(header, line))
         d = {}
         for key, value in line.items():
-            if key.lower() == 'month':
-                (month,year) = value.split('/')
-                if int(month) < 10 and len(month) == 1: 
-                    value = '0' + value
+            if key.lower() == "month":
+                (month, year) = value.split("/")
+                if int(month) < 10 and len(month) == 1:
+                    value = f"0{value}"
                 TEACHER_SCHEDULE[value] = d
             else:
                 # eg. Level 1@7:20
-                name, time = key.split('@')
+                name, time = key.split("@")
 
                 # In the instructor field of the CSV file,
                 # prepend with the class letter and a colon
                 # eg. A:Kirk & Iris
-                if ':' in value:
-                    section, value = value.split(':')
+                if ":" in value:
+                    section, value = value.split(":")
 
                     # 'Level 1A'
                     class_name = name + section
 
                     # Look up the description in the dictionary
                     if class_name in class_desc_dict:
-                        name = class_name + ' - ' +  class_desc_dict[class_name]
+                        name = f"{class_name} - {class_desc_dict[class_name]}"
                     else:
                         name = class_name
-                        print('Unknown class type: ' + class_name)
+                        print(f"Unknown class type: {class_name}")
                 if value:
                     d.setdefault(time, {})[name] = value
 
-SENDGRID_PASSWORD = environ.get('SENDGRID_PASSWORD')
-SENDGRID_USERNAME = environ.get('SENDGRID_USERNAME')
+SENDGRID_PASSWORD = environ.get("SENDGRID_PASSWORD")
+SENDGRID_USERNAME = environ.get("SENDGRID_USERNAME")
 
-GOOGLE_RECAPTCHA_SECRET_KEY = environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
-CONTACT_EMAIL = 'info@920special.com'
-DEBUG_EMAIL = environ.get('DEBUG_EMAIL')
+GOOGLE_RECAPTCHA_SECRET_KEY = environ.get("GOOGLE_RECAPTCHA_SECRET_KEY")
+CONTACT_EMAIL = "info@920special.com"
+DEBUG_EMAIL = environ.get("DEBUG_EMAIL")
