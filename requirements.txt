@@ -5,11 +5,12 @@ uwsgi
 django==2.2.28
 jinja2
 pyyaml
+setuptools==69.2.0
 django_jinja
 django-pipeline
 django-pipeline-compass
 path.py
-libsass
+libsass==0.23.0
 toolz
 sendgrid==2.2.1
 tzlocal
