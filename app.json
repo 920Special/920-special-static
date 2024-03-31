@@ -3,14 +3,9 @@
   "description": "This app does one little thing, and does it well.",
   "stack": "heroku-22",
   "buildpacks": [
-    { "url": "https://github.com/heroku/heroku-buildpack-apt"},
     { "url": "https://github.com/heroku/heroku-buildpack-nginx" },
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs" },
-    { "url": "https://github.com/heroku/heroku-buildpack-ruby" },
     { "url": "https://github.com/heroku/heroku-buildpack-python" }
-  ],
-    "scripts": {
-      "precompile": "gem install sass"
-  }
+  ]
 }
 
