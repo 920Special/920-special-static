@@ -6,7 +6,8 @@
     { "url": "https://github.com/heroku/heroku-buildpack-nginx" },
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs" },
     { "url": "https://github.com/heroku/heroku-buildpack-ruby" },
-    { "url": "https://github.com/heroku/heroku-buildpack-python" }
+    { "url": "https://github.com/heroku/heroku-buildpack-python" },
+    { "url": "https://github.com/heroku/heroku-buildpack-apt"}
   ],
     "scripts": {
       "precompile": "sudo apt-get install -y libsass && gem install sass"
