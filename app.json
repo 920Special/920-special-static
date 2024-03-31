@@ -9,7 +9,7 @@
     { "url": "https://github.com/heroku/heroku-buildpack-python" }
   ],
     "scripts": {
-    "precompile": "gem install sass"
+      "precompile": "sudo apt-get install -y libsass && gem install sass"
   }
 }
 
