@@ -17,12 +17,12 @@ from .views import (
 )
 
 urlpatterns = [
-    url(r'^about', About.as_view()),
-    url(r'^classes', Classes.as_view()),
-    url(r'^dance', Dance.as_view()),
-    url(r'^music', Music.as_view()),
-    url(r'^volunteers', Volunteers.as_view()),
-    url(r'^survey', Survey.as_view()),
-    url(r'^contact/?', Contact.as_view()),
-    url(r'^$', Index.as_view()),
+    url(r"^about.html", About.as_view()),
+    url(r"^classes.html", Classes.as_view()),
+    url(r"^dance.html", Dance.as_view()),
+    url(r"^music.html", Music.as_view()),
+    url(r"^volunteers.html", Volunteers.as_view()),
+    url(r"^survey.html", Survey.as_view()),
+    url(r"^contact/?", Contact.as_view()),
+    url(r"^$", Index.as_view()),
 ]
