@@ -35,7 +35,7 @@ http {
         add_header X-Clacks-Overhead "GNU Terry Pratchett";
 
         # If 'static' is in the URL, but not at the start, return 444.
-        location ~* ^/*/static/{
+        location ~* ^/\w+/static/ {
             return 444;
         }
         location / {
