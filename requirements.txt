@@ -2,7 +2,7 @@ gunicorn
 static
 futures
 uwsgi
-django==2.2.28
+django==3.1.14
 jinja2
 pyyaml
 setuptools==69.2.0

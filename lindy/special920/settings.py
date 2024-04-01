@@ -10,10 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
-
-
-
-
 # Standard Library
 import os
 from os import environ
@@ -160,15 +156,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATICFILES_STORAGE = "pipeline.storage.PipelineCachedStorage"
+STATICFILES_STORAGE = "pipeline.storage.PipelineStorage"
 STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'pipeline.finders.PipelineFinder',
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "pipeline.finders.PipelineFinder",
 )
 
 SHOW_ERRORS_INLINE = True
-PIPELINE_STORAGE = "pipeline.storage.PipelineCachedStorage"
+PIPELINE_STORAGE = "pipeline.storage.PipelineStorage"
 PIPELINE = {
     "SHOW_ERRORS_INLINE": True,
     "STYLESHEETS": {
