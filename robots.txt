@@ -1,0 +1,2 @@
+User-agent: Amazonbot             # Amazon's user agent
+Disallow: /do-not-crawl/
